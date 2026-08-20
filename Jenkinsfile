@@ -4,7 +4,7 @@ def configMap = [
     project: "roboshop",
     component: "catalogue"
 ]
-testpipeline(configMap)
+testPipeline(configMap)
 
 // if (env.BRANCH_NAME.equalsIgnoreCase('main')){
 //     nodejsEKSMain(configMap)
