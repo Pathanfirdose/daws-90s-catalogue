@@ -4,11 +4,12 @@ def configMap = [
     project: "roboshop",
     component: "catalogue"
 ]
-testPipeline(configMap)
+// testPipeline(configMap)
 
-// if (env.BRANCH_NAME.equalsIgnoreCase('main')){
-//     nodejsEKSMain(configMap)
-// }
-// else {
-//     nodejsEKSPipeline(configMap)
-// }
+if (env.BRANCH_NAME.equalsIgnoreCase('main')){
+    // nodejsEKSMain(configMap)
+    we will deal later
+}
+else {
+    nodejsEKSPipeline(configMap)
+}
