@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: catalogue
+  name: daws-90s-catalogue
   namespace: {{ .Values.namespace }}
 data:
   MONGO: "true"

@@ -2,30 +2,30 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: catalogue
+  name: daws-90s-catalogue
   namespace: {{ .Values.namespace }}
   # labels related to deployment resource
   labels:
     project: roboshop
     tier: backend
-    component: catalogue
+    component: daws-90s-catalogue
 spec:
   replicas: 1
   selector:
     matchLabels:
       project: roboshop
       tier: backend
-      component: catalogue
+      component: daws-90s-catalogue
   # Pod
   template:
     metadata:
       labels:
         project: roboshop
         tier: backend
-        component: catalogue
+        component: daws-90s-catalogue
     spec:
       containers:
-      - name: catalogue
+      - name: daws-90s-catalogue
         image: "{{ .Values.deployment.imageRepo }}:{{ .Values.deployment.imageVersion }}"
         resources:
           requests:
@@ -36,4 +36,4 @@ spec:
             memory: "128Mi"
         envFrom:
         - configMapRef:
-            name: catalogue
+            name: daws-90s-catalogue
