@@ -1,12 +1,11 @@
-@Library('daws-90s-jenkins-shared-library') _
+@Library('jenkins-shared-library') _
 
 def configMap = [
     project: "roboshop",
     component: "catalogue"
 ]
-
 if (env.BRANCH_NAME.equalsIgnoreCase('main')){
-    echo "we will deal later"
+    nodejsEKSMain(configMap)
 }
 else {
     nodejsEKSPipeline(configMap)
