@@ -2,7 +2,7 @@
 
 def configMap = [
     project: "roboshop",
-    component: "catalogue"
+    component: "daws-90s-catalogue"
 ]
 if (env.BRANCH_NAME.equalsIgnoreCase('main')){
     nodejsEKSMain(configMap)
